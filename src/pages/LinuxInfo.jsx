@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import tux from "../assets/tux.png"; // Asegúrate de tener una imagen llamada tux.png en /src/assets
+import tux from "../assets/tux.png";
 
 export default function LinuxInfo() {
   const navigate = useNavigate();

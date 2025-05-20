@@ -1,13 +1,23 @@
 import { useNavigate } from "react-router-dom";
-import { Home as HomeIcon, Lock, Menu } from "lucide-react";
+import { Home as HomeIcon, Lock, Menu, LogOut } from "lucide-react";
 
 export default function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white px-6 py-8">
+    <div className="min-h-screen flex flex-col justify-between bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white px-6 pt-8 pb-4">
       <div>
-        <h1 className="text-2xl font-bold mb-8">Welcome, Hacker!</h1>
+        {/* Header: título y botón de log out */}
+        <div className="flex items-center justify-between mb-8">
+          <h1 className="text-2xl font-bold">Welcome, Hacker!</h1>
+          <button
+            onClick={() => navigate("/")}
+            className="text-gray-400 hover:text-red-500 transition"
+            title="Log Out"
+          >
+            <LogOut className="w-6 h-6" />
+          </button>
+        </div>
 
         <div className="space-y-4">
           <div className="bg-gray-900 border border-gray-700 rounded-2xl p-6 shadow-lg">
@@ -23,7 +33,8 @@ export default function Home() {
         </div>
       </div>
 
-      <nav className="flex justify-around items-center bg-gray-950 border-t border-gray-800 rounded-t-2xl py-4 shadow-inner">
+      {/* Navigation bar */}
+      <nav className="fixed bottom-0 left-0 right-0 flex justify-around items-center bg-gray-950 border-t border-gray-800 py-4 shadow-inner z-50">
         <button className="flex flex-col items-center text-cyan-500">
           <HomeIcon className="w-6 h-6" />
           <span className="text-xs mt-1">Home</span>
