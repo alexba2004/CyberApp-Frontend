@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col justify-between bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white px-6 pt-8 pb-4">
       <div>
-        {/* Header: título y botón de log out */}
         <div className="flex items-center justify-between mb-8">
           <h1 className="text-2xl font-bold">Welcome, Hacker!</h1>
           <button
